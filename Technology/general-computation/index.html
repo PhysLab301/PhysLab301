@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>计算与数据科学入门 | PhysLab@301</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="科学计算">
+  
+  
+  
+  
+  <meta name="description" content="2016张渝宁 首先声明-我们是Scientist！科学家！! 不是程序猿！ 我们使用完全不同的工具集和方法论，并且着眼于完全不同的目标。对科学家而言，代码和软件只是解决问题的工具，而非目的本身。 参见科学计算的程序编写和通常所说的码农的编程有多大的区别？ 鉴于这一领域的知识实在过于庞大,在此仅作简单介绍汇总,希望大家有一个简略的印象. 那些写代码的科学家在干什么？百科Wikipedia: Sci">
+<meta name="keywords" content="科学计算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算与数据科学入门">
+<meta property="og:url" content="http://physlab.science/Technology/general-computation/index.html">
+<meta property="og:site_name" content="PhysLab@301">
+<meta property="og:description" content="2016张渝宁 首先声明-我们是Scientist！科学家！! 不是程序猿！ 我们使用完全不同的工具集和方法论，并且着眼于完全不同的目标。对科学家而言，代码和软件只是解决问题的工具，而非目的本身。 参见科学计算的程序编写和通常所说的码农的编程有多大的区别？ 鉴于这一领域的知识实在过于庞大,在此仅作简单介绍汇总,希望大家有一个简略的印象. 那些写代码的科学家在干什么？百科Wikipedia: Sci">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://physlab.science/asset/images/atlas-collider.jpg">
+<meta property="og:image" content="http://physlab.science/asset/images/code-monkey.png">
+<meta property="og:updated_time" content="2019-09-03T06:06:30.418Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="计算与数据科学入门">
+<meta name="twitter:description" content="2016张渝宁 首先声明-我们是Scientist！科学家！! 不是程序猿！ 我们使用完全不同的工具集和方法论，并且着眼于完全不同的目标。对科学家而言，代码和软件只是解决问题的工具，而非目的本身。 参见科学计算的程序编写和通常所说的码农的编程有多大的区别？ 鉴于这一领域的知识实在过于庞大,在此仅作简单介绍汇总,希望大家有一个简略的印象. 那些写代码的科学家在干什么？百科Wikipedia: Sci">
+<meta name="twitter:image" content="http://physlab.science/asset/images/atlas-collider.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="PhysLab@301" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/mylogo.jpg">
+  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css">
+  
+
+  
+  
+  
+
+</head>
+</html>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">Categories</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-general-computation" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      计算与数据科学入门
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/Technology/general-computation/" class="article-date">
+	  <time datetime="2018-12-11T05:08:11.000Z" itemprop="datePublished">2018-12-11</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Technology/">Technology</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2016张渝宁</p>
+<p>首先声明-<br><strong>我们是Scientist！科学家！! 不是程序猿！</strong></p>
+<p>我们使用完全不同的工具集和方法论，并且着眼于完全不同的目标。<br>对科学家而言，代码和软件只是解决问题的工具，而非目的本身。</p>
+<p>参见<br><a href="https://www.zhihu.com/question/33515914/answer/57060509" target="_blank" rel="noopener">科学计算的程序编写和通常所说的码农的编程有多大的区别？</a></p>
+<p>鉴于这一领域的知识实在过于庞大,在此仅作简单介绍汇总,希望大家有一个简略的印象.</p>
+<h2 id="那些写代码的科学家在干什么？"><a href="#那些写代码的科学家在干什么？" class="headerlink" title="那些写代码的科学家在干什么？"></a>那些写代码的科学家在干什么？</h2><p>百科<br><a href="https://en.wikipedia.org/wiki/Computational_science" target="_blank" rel="noopener">Wikipedia: Scientific-Computation</a><br><a href="https://en.wikipedia.org/wiki/Computational_physics" target="_blank" rel="noopener">Wikipedia: Copmputational-Physics</a></p>
+<p>ps: 英文阅读有困难请在wiki中选择中文</p>
+<p>如果你选修过数学实验这门课程，你大概已经对这个领域有所了解。随着计算机科学的不断发展，<strong>计算</strong>已经成为了现代科研体系中与<strong>实验</strong>和<strong>理论</strong>并列的第三大研究范式。这是数学-物理-计算机的交叉处，主要实践是科学家和工程师通过编写程序处理实验或者测试数据，或进行数值分析来解决研究或工程实践中的复杂问题。</p>
+<p><img src="/asset/images/atlas-collider.jpg" alt="ATLAS 对撞机"></p>
+<p>驱动这一领域发展的动力如下</p>
+<ol>
+<li>科研中面临的问题非常困难以至于很难通过传统数学分析求解（例如，流体力学，量子化学，非线性动力系统-天气系统、三体系统）。机器可以做到人类做不到事情（解偏微分方程，不需要数学物理方法，只需要算法）。</li>
+<li>现代研究中不断膨胀的数据量，无法再手动处理。（例如，CERN欧洲核子碰撞中心使用机器学习从TB级数据中检测Higgs粒子，或者LIGO天文台从TB级的天文数据中寻找引力波）</li>
+<li>将大部分工作流程自动化，极大提高工作效率。让科研狗有时间和妹子约会 XD。（误）</li>
+</ol>
+<p><strong>简而言之，现代研究遇到的大多数问题都及其复杂，只靠人类大脑的计算处理能力已经捉襟见肘。因此科学家理所当然地借助人类有史以来发明的最为强大的生产力工具-计算机，计算和编程是每一个现代科研工作者所必须掌握地基本技能。</strong></p>
+<h2 id="你可以用计算机做什么？"><a href="#你可以用计算机做什么？" class="headerlink" title="你可以用计算机做什么？"></a>你可以用计算机做什么？</h2><p>首要功能当然是让自己看起来很Cooooooooool（逃）<br><img src="/asset/images/code-monkey.png" alt></p>
+<p>事实上<strong>你从课本中学到的所有数学分析方法都有对应计算工具。有数学的地方就有计算,研究的每一步都会用到大量的计算和分析,用到代码</strong></p>
+<h3 id="1-数据分析"><a href="#1-数据分析" class="headerlink" title="1. 数据分析"></a>1. 数据分析</h3><p><em>Mathematical Statistics</em></p>
+<ul>
+<li>数据处理（去除错误数据，滤波，插值等等）</li>
+<li>数据分析（相关性，因果性，统计数值特征，回归，拟合）</li>
+<li>数据可视化（眼见为实，给出物理图像和直觉）</li>
+</ul>
+<p>基本包含数理统计的所有工具，指标和特征分析，回归拟合，可视化，特征提取</p>
+<h3 id="2-科学计算"><a href="#2-科学计算" class="headerlink" title="2. 科学计算"></a>2. 科学计算</h3><p><em>Mathematical Analysis</em></p>
+<ul>
+<li>数值计算 (插值 拟合 数值求解微分/偏微分方程 数值积分/微分 优化 随机过程模拟)</li>
+<li>符号计算 (自动化公式推导 符号微分/积分 级数展开分析 微分方程求解)</li>
+</ul>
+<p>基本包含数学分析的所有工具（微积分，级数和递归，微分方程，频谱分析）</p>
+<h2 id="我需要使用什么样的科学计算工具？"><a href="#我需要使用什么样的科学计算工具？" class="headerlink" title="我需要使用什么样的科学计算工具？"></a>我需要使用什么样的科学计算工具？</h2><p>本章节所用到的所有计算工具都强大且复杂，完整的掌握任意之一都需要多年的学习时间和专业知识，<strong>后续会有更多Post对每一种工具进行详细介绍。</strong></p>
+<p><strong>Recommended</strong></p>
+<h3 id="Mathemtaica”"><a href="#Mathemtaica”" class="headerlink" title="Mathemtaica”"></a><a href="http://www.wolfram.com/mathematica/" target="_blank" rel="noopener">Mathemtaica”</a></h3><p>地表最强数学软件没有之一，物理系圣剑，优势在于微分方程和符号计算，以及快速的可视化。不过Mathematica最强大的功能还是在于 Data Integrated——你可以直接从Mathematica调用Wolfram Alpha存储的实体数据（包含各种物理化学常数以及粒子和宇宙学数据等等），避免了手动输入常数的烦恼。</p>
+<ul>
+<li><a href="https://www.zhihu.com/question/27834147/answer/38337425" target="_blank" rel="noopener">知乎： Mathematica有多厉害</a></li>
+<li><a href="http://www.wolfram.com/wolfram-u/" target="_blank" rel="noopener">学习： Wolfram U</a></li>
+<li><a href="http://www.wolfram.com/language/elementary-introduction/2nd-ed/?source=nav" target="_blank" rel="noopener">学习： Elementary Language Introduction</a></li>
+<li><a href="http://m.wolframalpha.com/" target="_blank" rel="noopener">Wolfram Alpha</a></li>
+</ul>
+<h3 id="Python”"><a href="#Python”" class="headerlink" title="Python”"></a><a href="https://www.python.org/" target="_blank" rel="noopener">Python”</a></h3><p>推荐Anaconda科学计算发行版（内置所有科学计算第三方库），学界和产业界的主流通用科学计算解决方案，优势在于简单易用，强大全面，虽然在某些细分领域无法与专业软件媲美，但是其多样化的通用计算能力是Python计算生态可以延续的根本性原因。<br>ps: 可以完全取代MATLAB以及大部分Mathematica。</p>
+<p>常用库科普（Anaconda 集成）：</p>
+<ul>
+<li>Numpy: 即 Numerical Py 矩阵和数值计算</li>
+<li>Scipy: 即 Scientific Py 科学计算工具，拟合/回归/优化</li>
+<li><p>Sympy: 即 Symbolic Py 符号计算，支持LaTeX导出，符号代数系统</p>
+</li>
+<li><p>Pandas: 数据分析，支持xlsx和可视化</p>
+</li>
+<li>Jupyter: 交互式笔记本前端，支持code/LaTex/markdown混合输入和可视化，被学界认为是未来数字化论文的标准格式。</li>
+<li><p>Matplotlib: 绘图库，接口与MATLAB类似，可以满足绝大多数可视化需求。</p>
+</li>
+<li><p><a href="https://www.anaconda.com/" target="_blank" rel="noopener">Python: Anaconda</a></p>
+</li>
+<li><a href="https://www.youtube.com/watch?v=A9tv7WBIwyM" target="_blank" rel="noopener">The Wonderful World of Scientific Computing with Python | SciPy 2014</a></li>
+<li><a href="https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-7" target="_blank" rel="noopener">Edx: Introduction to computational thinking</a></li>
+<li><a href="https://www.coursera.org/learn/computational-thinking-problem-solving" target="_blank" rel="noopener">Coursera: Computational Thinking for Problem Solving</a></li>
+</ul>
+<h3 id="Microsoft-Excel"><a href="#Microsoft-Excel" class="headerlink" title="Microsoft Excel"></a>Microsoft Excel</h3><p>小学生都可以玩的溜的数据处理。Excel的复杂功能和特性很少会用到，Excel的主要功能是日常记录实验数据以及快速可视化和基本处理。复杂的数据分析和计算环节通常由其他软件完成，Python(Pandas)和Mathematica支持导入.xlsx文件格式。</p>
+<ul>
+<li><a href="https://courses.edx.org/courses/course-v1:Microsoft+DAT206x+1T2018/course/" target="_blank" rel="noopener">Edx: Analyzing and Visualizing Data with Excel</a></li>
+<li><a href="https://www.zhihu.com/topic/19567930/top-answers" target="_blank" rel="noopener">知乎：Excel Top Answers</a></li>
+</ul>
+<h3 id="COMSOL”"><a href="#COMSOL”" class="headerlink" title="COMSOL”"></a><a href="https://www.comsol.com/comsol-multiphysics" target="_blank" rel="noopener">COMSOL”</a></h3><p>多物理场有限元模拟（FEM Simulation）领域顶级商业软件，功能非常强大。正版价格及其昂贵。</p>
+<ul>
+<li><a href="https://cn.comsol.com/learning-center" target="_blank" rel="noopener">官网：COMSOL学习中心</a></li>
+<li><a href="https://cn.comsol.com/multiphysics" target="_blank" rel="noopener">官网：多物理场百科</a></li>
+</ul>
+<p><strong>Optional</strong></p>
+<h3 id="C-C-”"><a href="#C-C-”" class="headerlink" title="C/C++”"></a><a href="http://www.mingw.org/" target="_blank" rel="noopener">C/C++”</a></h3><p>最为广泛使用的高级语言，全面的第三方库，高性能计算/并行计算<br>C/C++的在CUPT中应用并不广泛，实际科研中主要用于计算密集型任务的工具库的底层开发，顶层封装基本使用Python</p>
+<h3 id="MATLAB-Octave”"><a href="#MATLAB-Octave”" class="headerlink" title="MATLAB/Octave”"></a><a href="https://www.gnu.org/software/octave/" target="_blank" rel="noopener">MATLAB/Octave”</a></h3><p>不用多说，大家都懂，数值计算，实际上更多的是画图工具</p>
+<h3 id="Julia”"><a href="#Julia”" class="headerlink" title="Julia”"></a><a href="https://julialang.org/" target="_blank" rel="noopener">Julia”</a></h3><p>一门新兴的高性能科学计算语言，语法介于Fortran和Python之间，具有媲美C/Fortran的速度</p>
+<h2 id="如何提高编程和计算能力？"><a href="#如何提高编程和计算能力？" class="headerlink" title="如何提高编程和计算能力？"></a>如何提高编程和计算能力？</h2><p>请执行如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">while True:</span><br><span class="line">    practice()</span><br></pre></td></tr></table></figure></p>
+<p><strong>Talk is cheap, show me the code!</strong></p>
+<p>计算机是实践学科，在研究实践中用各种程序工具帮你解决棘手的问题，用自动化的代码帮你节省时间是最好的学习方式。<br>懒是驱动编程能力进步的第一动力，让计算机帮你做事，然后享受敲代码的快乐。</p>
+<p>To be continue…</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/Maintenance/laboratory-regulation/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          实验室使用和维护指南
+        
+      </div>
+    </a>
+  
+  
+    <a href="/Research/art-of-presentation/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">如何做好Presentation？</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#那些写代码的科学家在干什么？"><span class="nav-number">1.</span> <span class="nav-text">那些写代码的科学家在干什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#你可以用计算机做什么？"><span class="nav-number">2.</span> <span class="nav-text">你可以用计算机做什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-数据分析"><span class="nav-number">2.1.</span> <span class="nav-text">1. 数据分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-科学计算"><span class="nav-number">2.2.</span> <span class="nav-text">2. 科学计算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我需要使用什么样的科学计算工具？"><span class="nav-number">3.</span> <span class="nav-text">我需要使用什么样的科学计算工具？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mathemtaica”"><span class="nav-number">3.1.</span> <span class="nav-text">Mathemtaica”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python”"><span class="nav-number">3.2.</span> <span class="nav-text">Python”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Microsoft-Excel"><span class="nav-number">3.3.</span> <span class="nav-text">Microsoft Excel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#COMSOL”"><span class="nav-number">3.4.</span> <span class="nav-text">COMSOL”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-C-”"><span class="nav-number">3.5.</span> <span class="nav-text">C/C++”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MATLAB-Octave”"><span class="nav-number">3.6.</span> <span class="nav-text">MATLAB/Octave”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Julia”"><span class="nav-number">3.7.</span> <span class="nav-text">Julia”</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何提高编程和计算能力？"><span class="nav-number">4.</span> <span class="nav-text">如何提高编程和计算能力？</span></a></li></ol>
+    
+    </div>
+  </aside>
+
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <!-- <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p> -->
+	      <p id="copyRightEn">Copyright &copy; 2016 - 2019 PhysLab@301 All Rights Reserved.</p>
+	      
+	      
+  		   	<!-- <p id="copyRightCn">PhysLab@301 hold copyright</p> -->
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            PhysLab@301
+          </div>
+          <div class="panel-body">
+            Copyright © 2019 PhysLab@301 All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
+  
+</body>
+</html>

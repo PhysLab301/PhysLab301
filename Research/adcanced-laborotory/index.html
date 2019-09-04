@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>高等物理实验教程 | PhysLab@301</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="实验">
+  
+  
+  
+  
+  <meta name="description" content="Code for modeling and data analysis of PHYS128 AL. For Demonstration. @ 材料来自 UC Santa Barbara PHYS 128AL 高等物理实验 教科书-实验误差分析：Bevington.pdf &amp;amp; Taylor.pdf 文件夹：  ./Mathematica_Sample/ 包含Mathematica的画图实例">
+<meta name="keywords" content="实验">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高等物理实验教程">
+<meta property="og:url" content="http://physlab.science/Research/adcanced-laborotory/index.html">
+<meta property="og:site_name" content="PhysLab@301">
+<meta property="og:description" content="Code for modeling and data analysis of PHYS128 AL. For Demonstration. @ 材料来自 UC Santa Barbara PHYS 128AL 高等物理实验 教科书-实验误差分析：Bevington.pdf &amp;amp; Taylor.pdf 文件夹：  ./Mathematica_Sample/ 包含Mathematica的画图实例">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://physlab.science/asset/images/presentation.png">
+<meta property="og:image" content="http://physlab.science/asset/images/LIGO_group.jpg">
+<meta property="og:image" content="http://physlab.science/asset/images/labnote.jpg">
+<meta property="og:image" content="https://latex.codecogs.com/gif.latex?$(6.68\pm&space;0.21)&space;\times&space;10^{-11}$">
+<meta property="og:image" content="https://latex.codecogs.com/gif.latex?$&space;6.67048&space;\times&space;10^{-11}$">
+<meta property="og:image" content="https://jupyter.org/assets/jupyterpreview.png">
+<meta property="og:image" content="https://latex.codecogs.com/gif.latex?\sqrt{N}">
+<meta property="og:updated_time" content="2019-09-03T06:06:30.414Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="高等物理实验教程">
+<meta name="twitter:description" content="Code for modeling and data analysis of PHYS128 AL. For Demonstration. @ 材料来自 UC Santa Barbara PHYS 128AL 高等物理实验 教科书-实验误差分析：Bevington.pdf &amp;amp; Taylor.pdf 文件夹：  ./Mathematica_Sample/ 包含Mathematica的画图实例">
+<meta name="twitter:image" content="http://physlab.science/asset/images/presentation.png">
+  
+    <link rel="alternate" href="/atom.xml" title="PhysLab@301" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/mylogo.jpg">
+  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css">
+  
+
+  
+  
+  
+
+</head>
+</html>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">Categories</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-adcanced-laborotory" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      高等物理实验教程
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/Research/adcanced-laborotory/" class="article-date">
+	  <time datetime="2019-06-22T07:12:35.000Z" itemprop="datePublished">2019-06-22</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Research/">Research</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Code for modeling and data analysis of PHYS128 AL. For Demonstration.</p>
+<p>@ 材料来自 UC Santa Barbara PHYS 128AL 高等物理实验</p>
+<p>教科书-实验误差分析：<br>Bevington.pdf &amp; Taylor.pdf</p>
+<p>文件夹：</p>
+<ul>
+<li>./Mathematica_Sample/ 包含Mathematica的画图实例。</li>
+<li>./Experiment#/code/ 代码，用于数据分析和基本计算画图。包含Mathematica(.nb)和Python Jupyter Notebook(.ipynb)的计算笔记本。</li>
+<li>./Experiment/data/ 原始实验数据</li>
+</ul>
+<p>实验类型：</p>
+<ol>
+<li>Experiment1: 卡文迪许扭称实验 </li>
+<li>Experiment2: 密立根油滴实验</li>
+<li>Experiment3: 海平面mu介子寿命和通量测量</li>
+<li>Experiment4: 使用云室观察alpha散射</li>
+</ol>
+<p>Experiment# 文件夹下相关与实验名称相同的pdf为实验的介绍文档，Lab_Report.pdf 为最终实验报告（无本地文件，使用Overleaf在线完成），Lab_Note为实验过程中所做的笔记（对于复现实验来说非常重要）。</p>
+<p>鉴于官网还没人维护，鸽了几个月的实验Post就先写在这里了</p>
+<h2 id="1-实验设计和物理原理"><a href="#1-实验设计和物理原理" class="headerlink" title="1. 实验设计和物理原理"></a>1. 实验设计和物理原理</h2><p>设计实验之前一定要对研究目标和背景理论有清晰的认知，理论准备充分才能有良好的实验设计。<br><strong>当你可以清晰地用白板presentation展示出</strong></p>
+<ul>
+<li>基本理论</li>
+<li>你希望测量的物理量</li>
+<li>实验设计（set up）和技术细节</li>
+<li>数据处理方式和可能误差</li>
+<li>实验的核心创意和亮点</li>
+</ul>
+<p><strong>的时候，你距离一个优秀的物理实验就不远了。</strong></p>
+<p><img src="/asset/images/presentation.png" alt="Presentation"></p>
+<p>通常团队合作对于实验设计非常重要，因为实验设计依赖综合性的知识背景和能力（物理，工程经验，机械和电子技术，代码和编程），<br>而且实验仪器的构建需要不同领域的工程师和科学家合作。团队沟通，设计论证对于实验来说非常重要。</p>
+<p>实验是一个迭代的过程，一个良好的实验设计通常是在反复尝试，不断试错和debug过程中逐渐形成的。比起物理理论本身，实验更像是工程学，因为其更依赖经验和实践反馈而不是科学直觉。</p>
+<h3 id="设计基本原则："><a href="#设计基本原则：" class="headerlink" title="设计基本原则："></a>设计基本原则：</h3><ul>
+<li>原理清晰，简单（大大简化计算误差传递的过程）</li>
+<li>减小误差，通过设计规避或者消除噪声（例如扭称实验）</li>
+<li><strong>数据获取自动化</strong>，尽可能使用传感器和数字电路（极大的减少工作量并提高效率，让你的时间专注在有意义的事情上）</li>
+</ul>
+<p>了解并欣赏经典实验设计可以给你的实验提供良好的直觉，例如Cavendish使用扭称规避地球引力并通过多次转化放大物理量（LIGO测量引力波其实是同样思路），或者Millikan通过操作电场中的带电油雾观察到电荷的量子化特性（Stern-Gerlach实验展现自旋量子性）。</p>
+<p>参考 </p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Oil_drop_experiment" target="_blank" rel="noopener">Wiki: Millikan Experiment</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cavendish_experiment" target="_blank" rel="noopener">Wiki: Cavendish Experiment</a></li>
+<li><a href="https://www.zhihu.com/question/24079693/answer/38549900" target="_blank" rel="noopener">知乎：引力波探测的原理</a></li>
+</ul>
+<h2 id="2-实验仪器搭建"><a href="#2-实验仪器搭建" class="headerlink" title="2. 实验仪器搭建"></a>2. 实验仪器搭建</h2><p>这是一个工程师的话题，如果你不能找到程序员，机械工程师，电子电气工程师帮助你实现实验装置，那就自己学吧，你会发现你秃了也变强了（#滑稽），祝好运。</p>
+<p>还是那句话，团队对于实验来说非常重要，（想象一下CERN或者LIGO的几千人实验组），最重要的原因就是团队分工和合作可以提高效率（人类作为社会性动物的根本优势）。</p>
+<p><img src="/asset/images/LIGO_group.jpg" alt="LIGO 团队"></p>
+<p>最简单的例子：</p>
+<ul>
+<li>A同学搭建实验仪器的机械结构，</li>
+<li>B同学构建测量电路，</li>
+<li>C同学负责代码和数据处理，</li>
+<li>D同学负责整体设计和理论误差分析。</li>
+</ul>
+<p>当然对于小团队来说，分工绝对不是明确的，每个人一定要对彼此的工作有一定的了解（50%以上）才能有效地沟通合作。而且最好的合作是并行式的（Parallel-并联电路）而不是序列式的（Sequential-串联电路），不要以为你是一个程序员就可以在你的队友搭电路的时候袖手旁观。</p>
+<p>同样，记住工程和技术只是为你的实验服务的，你的焦点在于如何快速实现实验设计而不是工程细节（比如这个PCB是怎么做出来的，为什么这个焊点又掉了），再一次强调快速学习能力的重要。快速地开始你的实验搭建，边做边学，反复迭代试错是最好的实践模式。如果你要学完一整本数字电路和单片机系统（或者Python数据分析和可视化）之后才开始搭建实验仪器（分析实验数据），大概你只能参加下一届CUPT了（不，真相是你到了毕业都学不完的，没错哪怕是研究生毕业#滑稽）。</p>
+<p>不会就问，尽可能的利用网络和实验室的各种资源（学长，指导老师，各种文件资料）快速学习，这样你才有可能在一个月里搞定这些题目。</p>
+<p>参考</p>
+<ul>
+<li><a href="https://daily.zhihu.com/story/9168349" target="_blank" rel="noopener">实验室里用的仪器，都是科学家自己设计的吗？</a></li>
+<li><a href="https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/John%20H.%20Moore%2C%20Christopher%20C.%20Davis%2C%20Michael%20A.%20Coplan%2C%20Sandra%20C.%20Greer%20-%20Building%20Scientific%20Apparatus%20(2009%2C%20Cambridge%20University%20Press" target="_blank" rel="noopener">Building Scientific Apparatus</a>.pdf) -ps: 这本书可以当字典用，不会就查，看完是不可能看完的 </li>
+</ul>
+<h2 id="3-实验过程"><a href="#3-实验过程" class="headerlink" title="3. 实验过程"></a>3. 实验过程</h2><p><strong>实验过程是非常重要的！！！！！！！</strong><br><strong>实验笔记（LAB NOTE）是非常重要的！！！！！</strong></p>
+<p>千万不要以为你的实验设计完了就高枕无忧了，独立设计实验跟国内大学手把手跟着做实验课完全是两码事！就算是你已经有了完整详细的实验手册（当然这是不可能的），实验依然是一个非常非常容易出BUG的环节。任何一个细节的失误，例如一根搭错的电线，一个型号不对的电容（<strong>请参考0.1uF学弟何同学的光荣事迹</strong>），都足以葬送你的整个实验观测。当Debug一个月头都秃了之后你最终发现了问题的原因，心里面的mmp是一定忍不住的。</p>
+<p>为了避免这样的故事，请一定在实验中秉承严谨认真的态度，留意每一个细节。同时使用<strong>实验记录</strong>来保存实验的第一手资料，<strong>这一点非常重要</strong>。</p>
+<p>实验记录应该包含：</p>
+<ul>
+<li>基本的原始信息，实验时间，合作队友等。</li>
+<li>实验细节，例如相关仪器参数，环境参数</li>
+<li>实验基本操作，例如 1.测量了哪些物理量，2.装置调节过程和方法，参数设置 </li>
+<li>原始数据和基本的演算，对初步结果的评估</li>
+<li>实验中遇到的问题和bug，以及相关分析</li>
+<li>对误差的评估，以及减小误差的思路</li>
+</ul>
+<p>总之实验记录源于工程实践的经验，就像是工程中的开发文档，测试记录。<br>301之前这一方面做的很差，因为完全没有意识。大量的第一手计算手稿都是随手一划，惨遭丢弃。实验进程全靠反复试错后的个人经验积累，效率低下。实验记录也是在国内本科生的实验课程体系中是几乎被忽视的一个环节，因为详实可靠的实验记录需要很高的时间成本。但实际上磨刀不误砍柴工，经过系统整理的实验报告，可以大大提高你的效率：</p>
+<p><img src="/asset/images/labnote.jpg" alt="Lab Note 举例"></p>
+<ul>
+<li>有效降低实验失误的几率，避免了大量无谓的debug和重复实验的时间。</li>
+<li>可以从过去的实验笔记中不断总结问题，并且改进实验设计</li>
+<li>还原实验细节，提供可复现性，即便出问题也可以加快debug进度</li>
+<li>展示和报告，你可以通过原始试验记录快速构建实验报告或者presentation</li>
+</ul>
+<p>实验记录举例</p>
+<ul>
+<li><a href="https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment3/Muon_Lab_Note.pdf" target="_blank" rel="noopener">Muon Lab Note</a></li>
+<li><a href="https://github.com/Neuromancer43/Ultraino/blob/master/Test_Log/test_log.txt" target="_blank" rel="noopener">卓越杯摸鱼记录</a></li>
+</ul>
+<p>参考</p>
+<ul>
+<li><a href="https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/labnotebooks.pdf" target="_blank" rel="noopener">MIT: How to use your Lab Notebook</a></li>
+<li><a href="https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Lab_Notebook_508_(new" target="_blank" rel="noopener">NIH: Keeping a Lab Notebook</a>.pdf)</li>
+</ul>
+<h2 id="4-数据处理和误差分析"><a href="#4-数据处理和误差分析" class="headerlink" title="4. 数据处理和误差分析"></a>4. 数据处理和误差分析</h2><p>数据处理的目的在于通过数据检验你的理论是否正确，简单来说就是通过数据计算某些理论可预测量，并进行对比。<br>例如，引力常数测量值<br><a href="https://www.codecogs.com/eqnedit.php?latex=$(6.68\pm&space;0.21)&space;\times&space;10^{-11}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$(6.68\pm&space;0.21)&space;\times&space;10^{-11}$" title="$(6.68\pm 0.21) \times 10^{-11}$"></a><br>对比实际值<br><a href="https://www.codecogs.com/eqnedit.php?latex=$&space;6.67048&space;\times&space;10^{-11}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$&space;6.67048&space;\times&space;10^{-11}$" title="$ 6.67048 \times 10^{-11}$"></a>。</p>
+<p><em>计算误差是数据处理最容易被忽视的部分，也是物理实验最重要的部分，没有误差和不确定度的测量结果毫无意义。</em></p>
+<p>实验的可信度完全来自误差的分析，例如可能你的测量非常精确，与理论标准值仅差距0.01% ，但标准值却在测量的3 sigma范围之外，这仍然说明你的测量存在系统误差，实验设计并不合理。或者你的结果与实验非常接近，但是测量标准差非常大，可能是差距的五到十倍，那很有可能这次测量只是运气的结果。总之，请一定注意<strong>严谨的误差讨论是实验的灵魂。</strong></p>
+<p>参考:<br><a href="https://blogs.scientificamerican.com/observations/five-sigmawhats-that/?redirect=1" target="_blank" rel="noopener">科学中的5 sigma 原则</a></p>
+<p>那么如何处理数据并进行误差分析？<br>通常使用Python工具栈数据处理是最高效的，目前科学界的主流数据分析工具是<strong>Jupyter Notebook</strong>。<br>如果你以后有志于学术界，那么这项技能是<strong>必备</strong>的（有意见认为Jupyter将是下一代数字化科技论文的标准格式）。<br>这里就体现出了自动化数据记录的重要性——如果你是用传感电路获取数据，那么你的计算过程将非常简单愉快。</p>
+<p>例如 Python 笔记本（原始文件位于本库同名文件夹<br>）：</p>
+<ul>
+<li><a href="https://nbviewer.jupyter.org/github/Neuromancer43/Advanced-Laboratory/blob/master/Experiment3/Muon_Physics.ipynb" target="_blank" rel="noopener">Muon 数据分析</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/Neuromancer43/Advanced-Laboratory/blob/master/Experiment2/Millikan_Droplet.ipynb" target="_blank" rel="noopener">Millikan 数据分析</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/Neuromancer43/Advanced-Laboratory/blob/master/Experiment4/Cloud%20Chamber.ipynb" target="_blank" rel="noopener">Cloud Chamber 数据分析</a></li>
+</ul>
+<p>当然，你也可以使用Mathematica Notebook来分析实验数据，或者进行基本的误差分析（Error Propagation）</p>
+<ul>
+<li><a href="https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Experiment1/expriment_1.nb" target="_blank" rel="noopener">Cavendish 数据分析</a></li>
+</ul>
+<p>当然，如果你需要解微分方程或者引入物理学常数，那么通常Mathematica是更好的选择（简单快速，熟练），但是实际上Python的Sympy(Symbolic Python)包可以提供同样可靠的计算机代数系统。关于科学计算的更多消息请移步网站相关帖子。<br>参见</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Project_Jupyter" target="_blank" rel="noopener">Wiki: Project Jupyter</a></li>
+<li><a href="https://www.anaconda.com/distribution/" target="_blank" rel="noopener">Anaconda科学计算环境</a></li>
+</ul>
+<p><img src="https://jupyter.org/assets/jupyterpreview.png" alt></p>
+<p>实验数据分析通常包括</p>
+<ul>
+<li>导入格式化数据（csv,tsv,txt,xlsx）等等</li>
+<li>进行基本处理，例如求平均值，做差，聚类，线性回归等等</li>
+<li>将处理过的数据带入你的理论模型（通常是一个公式，或者数值微分方程，带入数据和参数计算你需要的结果）</li>
+<li><strong>使用误差传递公式，计算测量误差和不确定度</strong></li>
+</ul>
+<p>参考：<a href="https://en.wikipedia.org/wiki/Propagation_of_uncertainty" target="_blank" rel="noopener">Wiki: 不确定度传递</a></p>
+<p>不同形式实验数据的误差大不相同，这取决于具体的实验和理论，如果模型中最终有积分或者曲线拟合这样的操作，那么简单的线性误差公式就不再适用。<br>例如，计数数据的不确定度是<a href="https://www.codecogs.com/eqnedit.php?latex=\sqrt{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sqrt{N}" title="\sqrt{N}"></a>。而曲线拟合的不确定度通常可由程序得出<a href="https://stackoverflow.com/questions/14581358/getting-standard-errors-on-fitted-parameters-using-the-optimize-leastsq-method-i" target="_blank" rel="noopener">StackOverflow: Getting standard errors on fitted parameters using the optimize.leastsq method in python</a>。</p>
+<p>更多关于数据分析和不确定度的讨论请见参考书</p>
+<ul>
+<li><a href="https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Taylor.pdf" target="_blank" rel="noopener">An Introduction to Data Analysis-Taylor</a></li>
+<li><a href="https://github.com/Neuromancer43/Advanced-Laboratory/blob/master/Bevington.pdf" target="_blank" rel="noopener">Data Reduction and Error Analysis-Bevington</a></li>
+</ul>
+<p>暂时到这，如果各位学弟学妹有问题欢迎提问，如果觉得写的还可以求点赞（Star）+关注（Follow）#滑稽。</p>
+<p>June.4th at UCSB</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/uncategorized/finance-management/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">基本财务处理</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-实验设计和物理原理"><span class="nav-number">1.</span> <span class="nav-text">1. 实验设计和物理原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计基本原则："><span class="nav-number">1.1.</span> <span class="nav-text">设计基本原则：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-实验仪器搭建"><span class="nav-number">2.</span> <span class="nav-text">2. 实验仪器搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-实验过程"><span class="nav-number">3.</span> <span class="nav-text">3. 实验过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-数据处理和误差分析"><span class="nav-number">4.</span> <span class="nav-text">4. 数据处理和误差分析</span></a></li></ol>
+    
+    </div>
+  </aside>
+
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <!-- <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p> -->
+	      <p id="copyRightEn">Copyright &copy; 2016 - 2019 PhysLab@301 All Rights Reserved.</p>
+	      
+	      
+  		   	<!-- <p id="copyRightCn">PhysLab@301 hold copyright</p> -->
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            PhysLab@301
+          </div>
+          <div class="panel-body">
+            Copyright © 2019 PhysLab@301 All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
+  
+</body>
+</html>
